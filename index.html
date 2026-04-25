@@ -783,6 +783,84 @@ body::before {
  }
 .loop-step.n { color: var(--gold); font-family: var(--f-display); font-size: 20px; font-weight: 500; letter-spacing: 0; text-transform: none; }
 .loop-step.arrow { margin-left: auto; color: var(--leaf-bright); }
+
+/* ---------- Mobile nav + responsive ---------- */
+.nav-toggle {
+ display: none;
+ width: 42px; height: 42px;
+ background: transparent;
+ border: 1px solid var(--gold-line);
+ cursor: pointer;
+ padding: 0;
+ align-items: center; justify-content: center;
+ color: var(--cream);
+ -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle span { display: block; width: 18px; height: 1.5px; background: var(--cream); position: relative; transition: background 0.2s; }
+.nav-toggle span::before,
+.nav-toggle span::after { content: ""; position: absolute; left: 0; width: 18px; height: 1.5px; background: var(--cream); transition: transform 0.25s; }
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after { top: 6px; }
+.nav-toggle.open span { background: transparent; }
+.nav-toggle.open span::before { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.open span::after { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 720px) {
+ .nav-inner { position: relative; }
+ .nav-toggle { display: inline-flex; }
+ .nav-links {
+ position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+ flex-direction: column; align-items: stretch;
+ background: rgba(8, 14, 18, 0.98);
+ backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+ border-bottom: 1px solid var(--line);
+ padding: 6px 0; gap: 0;
+ transform: translateY(-6px); opacity: 0; visibility: hidden; pointer-events: none;
+ transition: opacity 0.22s, transform 0.22s, visibility 0.22s;
+ }
+ .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+ .nav-links a { padding: 14px 24px !important; width: 100%; text-align: left; font-size: 13px !important; letter-spacing: 0.14em; opacity: 1; border-bottom: 1px solid rgba(244, 200, 106, 0.08); }
+ .nav-links a:last-child { border-bottom: 0; }
+ .nav-links a.active::after { display: none; }
+}
+
+@media (max-width: 720px) {
+ .wrap { padding: 0 28px; }
+}
+
+@media (max-width: 640px) {
+ .section { padding: 70px 0; }
+ .press-section { padding: 48px 0 28px; }
+ .wishlist-band { padding: 70px 0 !important; }
+ .hero h1 { font-size: clamp(38px, 11vw, 58px); margin: 16px 0 20px; }
+ .hero .tagline { font-size: clamp(18px, 5vw, 24px); }
+ .hero-grid { padding: 50px 0 70px; }
+ .hero-portrait { max-width: 280px; }
+ .wishlist-band h2 { font-size: clamp(34px, 9vw, 56px) !important; margin: 10px 0 14px; }
+ .section-head h2 { font-size: clamp(30px, 8vw, 48px); }
+ .press-section h2 { font-size: clamp(26px, 7vw, 40px); }
+ .hero-meta { gap: 14px 28px; padding: 16px 0; margin: 20px 0; }
+ .hero-meta .v { font-size: 15.5px; }
+ .footer-inner { grid-template-columns: 1fr !important; gap: 28px; }
+ .footer { margin-top: 80px; padding: 50px 0 30px; }
+ .footer-tag { font-size: 20px; }
+ .btn { padding: 13px 22px; font-size: 11.5px; }
+ .hero-cta { width: 100%; }
+ .hero-cta .btn { flex: 1 1 calc(50% - 12px); justify-content: center; }
+ .steam-widget iframe { height: 200px; }
+ .pillar { padding: 30px 22px; }
+ .split { gap: 24px; }
+ .gallery { grid-template-rows: repeat(3, 180px) !important; }
+}
+
+@media (max-width: 420px) {
+ .wrap { padding: 0 22px; }
+ .hero h1 { font-size: clamp(32px, 10vw, 44px); }
+ .hero-cta .btn { flex: 1 1 100%; }
+ .wishlist-band h2 { font-size: clamp(28px, 8vw, 44px) !important; }
+ .footer-inner { padding: 0 22px; }
+ .footer-fine { padding: 20px 22px 0; }
+}
 </style>
 </head>
 <body data-page="home">
@@ -810,7 +888,7 @@ body::before {
  </div>
 
  <div class="hero-cta reveal reveal-d4">
- <a class="btn btn-primary" href="#wishlist">
+ <a class="btn btn-primary" href="https://store.steampowered.com/app/4247440/Leafborn/" target="_blank" rel="noopener">
  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14 L 2 8.5 C -0.5 6, 2 1.5, 5 3 C 6.5 3.7, 7.5 5, 8 5.8 C 8.5 5, 9.5 3.7, 11 3 C 14 1.5, 16.5 6, 14 8.5 Z"/></svg>
  Wishlist on Steam
  </a>
@@ -900,7 +978,10 @@ body::before {
  <div class="eyebrow reveal">Support the grove</div>
  <h2 class="reveal reveal-d1">Wishlist on <span class="hl">Steam</span>.</h2>
  <p class="lede reveal reveal-d2" style="margin:0 auto 28px">A single wishlist tells Steam a stranger cared, and helps more strangers find us. The quietest, kindest way to help.</p>
- <div class="reveal reveal-d3" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+ <div class="steam-widget reveal reveal-d3" style="margin:0 auto 28px;max-width:646px;">
+ <iframe src="https://store.steampowered.com/widget/4247440/" frameborder="0" loading="lazy" style="display:block;width:100%;max-width:646px;height:190px;margin:0 auto;border:0;" title="Leafborn on Steam"></iframe>
+ </div>
+ <div class="reveal reveal-d4" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
  <a class="btn btn-primary" href="https://store.steampowered.com/app/4247440/Leafborn/" target="_blank" rel="noopener">Wishlist Leafborn</a>
  <a class="btn btn-ghost" href="contact.html">Join the Discord</a>
  </div>
@@ -1091,10 +1172,11 @@ window.__LEAF_CFG = Object.assign({}, TWEAK_DEFAULTS, window.__LEAF_CFG || {});
  <a href="about.html" ${page==='about'?'class="active"':''}>About</a>
  <a href="contact.html" ${page==='contact'?'class="active"':''}>Contact</a>
  </div>
- <a class="nav-cta" href="#wishlist">
+ <a class="nav-cta" href="https://store.steampowered.com/app/4247440/Leafborn/" target="_blank" rel="noopener">
  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14 L 2 8.5 C -0.5 6, 2 1.5, 5 3 C 6.5 3.7, 7.5 5, 8 5.8 C 8.5 5, 9.5 3.7, 11 3 C 14 1.5, 16.5 6, 14 8.5 Z"/></svg>
  Wishlist on Steam
  </a>
+ <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
  </div>
 </nav>`;
  const footerHTML = `
@@ -1136,6 +1218,20 @@ window.__LEAF_CFG = Object.assign({}, TWEAK_DEFAULTS, window.__LEAF_CFG || {});
 </footer>`;
  document.getElementById('site-nav')?.insertAdjacentHTML('afterbegin', navHTML);
  document.getElementById('site-footer')?.insertAdjacentHTML('afterbegin', footerHTML);
+ const navToggle = document.querySelector('.nav-toggle');
+ const navLinks = document.querySelector('.nav-links');
+ if (navToggle && navLinks) {
+ navToggle.addEventListener('click', () => {
+ const isOpen = navLinks.classList.toggle('open');
+ navToggle.classList.toggle('open', isOpen);
+ navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+ });
+ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+ navLinks.classList.remove('open');
+ navToggle.classList.remove('open');
+ navToggle.setAttribute('aria-expanded', 'false');
+ }));
+ }
 })();
 </script>
 </body>

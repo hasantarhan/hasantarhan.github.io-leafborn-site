@@ -426,8 +426,6 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
  border-top: 1px solid var(--line);
  margin-top: 60px;
  }
- @media (max-width: 900px) {.press-grid { grid-template-columns: 1fr; gap: 32px; } }
-
 .toc { position: sticky; top: 90px; display: grid; gap: 2px; }
 .toc a {
  display: flex; gap: 14px; align-items: baseline;
@@ -440,6 +438,12 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
 .toc a:hover,.toc a.cur { color: var(--leaf-bright); opacity: 1; }
 .toc a span.n { color: var(--gold); font-weight: 500; }
 
+@media (max-width: 900px) {
+.press-grid { grid-template-columns: 1fr; gap: 32px; }
+.toc { position: static; top: auto; display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0 0 8px; border-bottom: 1px solid var(--line); }
+.toc a { padding: 8px 10px; border-bottom: 0; font-size: 12px; letter-spacing: 0.1em; gap: 6px; }
+}
+
 .press-section { padding: 60px 0 40px; scroll-margin-top: 90px; }
 .press-section h2 {
  font-family: var(--f-display);
@@ -450,7 +454,8 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
  letter-spacing: -0.015em;
  }
 .press-section h2 em { color: var(--leaf-bright); font-weight: 400; }
-.press-section h2.num {
+.press-section h2.num,
+.press-section h2 .num {
  font-family: var(--f-ui); font-weight: 500;
  font-size: 13.5px; letter-spacing: 0.3em;
  color: var(--gold);
@@ -586,6 +591,85 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
 .contact-box.big { font-family: var(--f-display); font-weight: 400; font-size: 26px; color: var(--leaf-bright); }
 
 .desc-block { display: grid; gap: 24px; }
+
+/* ---------- Mobile nav + responsive ---------- */
+.nav-toggle {
+ display: none;
+ width: 42px; height: 42px;
+ background: transparent;
+ border: 1px solid var(--gold-line);
+ cursor: pointer;
+ padding: 0;
+ align-items: center; justify-content: center;
+ color: var(--cream);
+ -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle span { display: block; width: 18px; height: 1.5px; background: var(--cream); position: relative; transition: background 0.2s; }
+.nav-toggle span::before,
+.nav-toggle span::after { content: ""; position: absolute; left: 0; width: 18px; height: 1.5px; background: var(--cream); transition: transform 0.25s; }
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after { top: 6px; }
+.nav-toggle.open span { background: transparent; }
+.nav-toggle.open span::before { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.open span::after { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 720px) {
+ .nav-inner { position: relative; }
+ .nav-toggle { display: inline-flex; }
+ .nav-links {
+ position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+ flex-direction: column; align-items: stretch;
+ background: rgba(8, 14, 18, 0.98);
+ backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+ border-bottom: 1px solid var(--line);
+ padding: 6px 0; gap: 0;
+ transform: translateY(-6px); opacity: 0; visibility: hidden; pointer-events: none;
+ transition: opacity 0.22s, transform 0.22s, visibility 0.22s;
+ }
+ .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; pointer-events: auto; }
+ .nav-links a { padding: 14px 24px !important; width: 100%; text-align: left; font-size: 13px !important; letter-spacing: 0.14em; opacity: 1; border-bottom: 1px solid rgba(244, 200, 106, 0.08); }
+ .nav-links a:last-child { border-bottom: 0; }
+ .nav-links a.active::after { display: none; }
+}
+
+@media (max-width: 720px) {
+ .wrap { padding: 0 28px; }
+}
+
+@media (max-width: 640px) {
+ .section { padding: 70px 0; }
+ .press-section { padding: 48px 0 28px; }
+ .press-section h2 { font-size: clamp(26px, 7vw, 40px); }
+ .footer-inner { grid-template-columns: 1fr !important; gap: 28px; }
+ .footer { margin-top: 80px; padding: 50px 0 30px; }
+ .footer-tag { font-size: 20px; }
+ .btn { padding: 13px 22px; font-size: 11.5px; }
+ .steam-widget iframe { height: 200px; }
+ .press-hero h1 { font-size: clamp(40px, 11vw, 62px) !important; }
+ .shots-grid { grid-template-columns: 1fr !important; }
+ .shots-grid .shot-wide { grid-column: auto !important; }
+ .shots { grid-template-columns: 1fr 1fr !important; }
+ .factsheet { grid-template-columns: 1fr !important; }
+ .factsheet .k { padding-bottom: 2px !important; border-bottom: 0 !important; font-size: 11px; }
+ .factsheet .v { padding-bottom: 12px !important; }
+ .features { grid-template-columns: 1fr !important; }
+ .usp-list { grid-template-columns: 1fr !important; }
+ .logos { grid-template-columns: 1fr !important; }
+ .palette { grid-template-columns: repeat(2, 1fr) !important; }
+ .pair { grid-template-columns: 1fr !important; }
+ .contact-box { padding: 22px !important; }
+ .contact-box .big { font-size: 20px !important; }
+ .drive-card { padding: 22px !important; }
+ .toc { gap: 6px !important; }
+ .toc a { font-size: 11.5px !important; padding: 10px 12px !important; }
+}
+
+@media (max-width: 420px) {
+ .wrap { padding: 0 22px; }
+ .footer-inner { padding: 0 22px; }
+ .footer-fine { padding: 20px 22px 0; }
+ .shots { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body data-page="press">
@@ -751,6 +835,18 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
 
  <!-- ─────────── -->
 
+ <section class="press-section" id="steam">
+ <h2 class="reveal"><span class="num">—</span>Live from <span class="hl">Steam</span>.</h2>
+ <div class="steam-widget reveal" style="margin:10px auto 0;max-width:646px;">
+ <iframe src="https://store.steampowered.com/widget/4247440/" frameborder="0" loading="lazy" style="display:block;width:100%;max-width:646px;height:190px;margin:0 auto;border:0;" title="Leafborn on Steam"></iframe>
+ </div>
+ <div class="reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px;">
+ <a class="btn btn-primary" href="https://store.steampowered.com/app/4247440/Leafborn/" target="_blank" rel="noopener">Open Steam page</a>
+ </div>
+ </section>
+
+ <!-- ─────────── -->
+
  <section class="press-section" id="contact">
  <h2 class="reveal"><span class="num">08 · Contact</span>Say <span class="hl">hello</span>.</h2>
  <div class="pair reveal">
@@ -872,10 +968,11 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
  <a href="about.html" ${page==='about'?'class="active"':''}>About</a>
  <a href="contact.html" ${page==='contact'?'class="active"':''}>Contact</a>
  </div>
- <a class="nav-cta" href="#wishlist">
+ <a class="nav-cta" href="https://store.steampowered.com/app/4247440/Leafborn/" target="_blank" rel="noopener">
  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14 L 2 8.5 C -0.5 6, 2 1.5, 5 3 C 6.5 3.7, 7.5 5, 8 5.8 C 8.5 5, 9.5 3.7, 11 3 C 14 1.5, 16.5 6, 14 8.5 Z"/></svg>
  Wishlist on Steam
  </a>
+ <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
  </div>
 </nav>`;
  const footerHTML = `
@@ -917,6 +1014,20 @@ h3, h4 { font-family: var(--f-display); font-weight: 600; letter-spacing: -0.01e
 </footer>`;
  document.getElementById('site-nav')?.insertAdjacentHTML('afterbegin', navHTML);
  document.getElementById('site-footer')?.insertAdjacentHTML('afterbegin', footerHTML);
+ const navToggle = document.querySelector('.nav-toggle');
+ const navLinks = document.querySelector('.nav-links');
+ if (navToggle && navLinks) {
+ navToggle.addEventListener('click', () => {
+ const isOpen = navLinks.classList.toggle('open');
+ navToggle.classList.toggle('open', isOpen);
+ navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+ });
+ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+ navLinks.classList.remove('open');
+ navToggle.classList.remove('open');
+ navToggle.setAttribute('aria-expanded', 'false');
+ }));
+ }
 })();
 </script>
 </body>
