@@ -1,13 +1,13 @@
-/* ===== Leafborn — light, warm, easy on the eyes ===== */
+/* ===== Leafborn · light, warm, easy on the eyes ===== */
 :root {
-  /* warm off-white palette — paper-like, not glaring */
+  /* warm off-white palette · paper-like, not glaring */
   --bg:           #F2EFE8;   /* page bg, warm parchment */
   --bg-1:         #ECE8DE;   /* card surfaces */
   --bg-2:         #E4DFD2;   /* hover / subtle elevation */
   --bg-3:         #DAD4C4;   /* tags, chips */
   --line:         rgba(40, 50, 35, 0.10);
   --line-strong:  rgba(40, 50, 35, 0.20);
-  --ink:          #232821;   /* body text — dark olive, not pure black */
+  --ink:          #232821;   /* body text · dark olive, not pure black */
   --ink-soft:     #535A4D;
   --ink-mute:     #8A8F82;
   --leaf:         #4F8A2B;   /* darkened for contrast on light bg */

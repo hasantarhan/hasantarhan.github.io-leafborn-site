@@ -1,4 +1,4 @@
-// Shared chrome — Leafborn (dark, compact)
+// Shared chrome · Leafborn (dark, compact)
 (function () {
   const page = document.body.dataset.page || '';
   const PRESS_URL = 'https://impress.games/press-kit/hasan-tarhan/leafborn';
