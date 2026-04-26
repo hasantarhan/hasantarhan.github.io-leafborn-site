@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk 'NR>=1103 && NR<=1140' E:/Repos/hasantarhan.github.io-leafborn-site/index.html)"
+    ]
+  }
+}
