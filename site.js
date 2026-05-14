@@ -1,7 +1,7 @@
 // Shared chrome · Leafborn (dark, compact)
 (function () {
   const page = document.body.dataset.page || '';
-  const PRESS_URL = 'https://impress.games/press-kit/hasan-tarhan/leafborn';
+  const PRESS_URL = 'https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=sharing';
   const STEAM_URL = 'https://store.steampowered.com/app/4247440/Leafborn/?utm_source=website';
 
   const navHTML = `
