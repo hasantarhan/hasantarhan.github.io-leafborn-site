@@ -1,112 +1,243 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Leafborn · A 3D roguelite of leaves and sky</title>
-<meta name="description" content="Leafborn is a 3D roguelite action set on floating sky islands. Play as a living humanoid of a thousand leaves. By Hasan Tarhan."/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Leafborn — Press Kit</title>
+  <meta name="description" content="Official Leafborn press kit by Green Cat Games: facts, descriptions, media, branding and credits." data-i18n-attr="content:meta.description">
+  <meta name="theme-color" content="#1b2838">
+  <meta property="og:title" content="Leafborn — Press Kit" data-i18n-attr="content:meta.ogTitle">
+  <meta property="og:description" content="A fast-paced action game about a shape-shifting being made of thousands of leaves." data-i18n-attr="content:meta.ogDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://leafborngame.net/press-assets/header.webp">
+  <link rel="canonical" href="https://leafborngame.net/">
+  <link rel="icon" href="press-assets/logo-mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="presskit-clean.css">
 </head>
-<body data-page="home">
+<body>
+  <a class="skip-link" href="#press-content" data-i18n="a11y.skip">Skip to content</a>
 
-<div id="site-nav"></div>
+  <header class="press-banner" aria-label="Leafborn key art" data-i18n-attr="aria-label:a11y.banner">
+    <img src="press-assets/key-art/background.webp" alt="Leafborn facing a Null robot in the world of Canopy" data-i18n-attr="alt:a11y.bannerAlt">
+    <div class="language-picker">
+      <label for="language-select" data-i18n="language.label">Language</label>
+      <select id="language-select" class="form-select form-select-sm" data-bs-theme="dark" aria-label="Language" data-i18n-attr="aria-label:language.label">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="pt-BR">Português (Brasil)</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+  </header>
 
-<main>
+  <main class="container press-layout" id="press-content">
+    <div class="row g-4 g-xl-5 align-items-start">
+      <aside class="col-lg-3 press-sidebar">
+        <a class="box-art-link" href="press-assets/box-art.png" target="_blank">
+          <img class="box-art" src="press-assets/box-art.webp" alt="Leafborn cover art" data-i18n-attr="alt:a11y.boxArtAlt">
+        </a>
+        <h1>Leafborn</h1>
+        <p class="publisher"><span data-i18n="sidebar.by">By</span> Green Cat Games</p>
 
-  <!-- HERO -->
-  <section class="hero wrap" data-screen-label="01 Hero">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <div>
-          <div class="eyebrow">v0.4 · build 312 · coming soon</div>
-          <h1>A thousand<br/>leaves.<br/><em>One will.</em></h1>
-          <p class="lede">A 3D roguelite of leaves and sky. You are a living humanoid born of the Tree of Life. Flow, burst, reform. Fight the rusted machines draining the wind.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=website" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 13.5 L 2.8 8.4 C 1 6.7, 2.4 3.5, 4.7 3.8 C 6 4, 7 4.8, 8 6 C 9 4.8, 10 4, 11.3 3.8 C 13.6 3.5, 15 6.7, 13.2 8.4 Z"/></svg>
-              Wishlist on Steam
-            </a>
-            <a class="btn btn-ghost" href="#trailer">Watch the trailer</a>
+        <nav class="section-nav nav flex-column" aria-label="Press kit sections" data-i18n-attr="aria-label:a11y.sectionNav">
+          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
+          <a class="nav-link" href="#trailer" data-i18n="trailer.heading">Trailer</a>
+          <a class="nav-link" href="#media" data-i18n="nav.media">Media</a>
+          <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
+          <a class="nav-link" href="#credits" data-i18n="nav.credits">Credits</a>
+        </nav>
+
+        <a class="download-all btn btn-success w-100" href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="actions.downloadImages">Open the Google Drive folder</a>
+        <a class="sidebar-steam btn btn-outline-light w-100" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=presskit&amp;utm_medium=sidebar" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span data-i18n="actions.viewSteam">View on Steam</span></a>
+      </aside>
+
+      <div class="col-lg-9 press-body">
+        <div class="row g-4 g-xl-5">
+          <section class="col-xl-4" id="factsheet">
+            <h2 data-i18n="factsheet.heading">Factsheet</h2>
+
+            <dl class="fact-list">
+              <div><dt data-i18n="factsheet.developerPublisher">Developer &amp; Publisher</dt><dd>Green Cat Games</dd></div>
+              <div><dt data-i18n="factsheet.basedIn">Based in</dt><dd data-i18n="factsheet.location">Istanbul, Turkey</dd></div>
+            </dl>
+
+            <div class="fact-block">
+              <h3 data-i18n="factsheet.platform">Platform</h3>
+              <a class="platform-pill btn btn-dark btn-sm d-inline-flex align-items-center gap-2" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span>Steam</span></a>
+            </div>
+
+            <div class="fact-block"><h3 data-i18n="factsheet.engine">Engine</h3><p>Unity 6 URP</p></div>
+            <div class="fact-block"><h3 data-i18n="factsheet.releaseStatus">Release Status</h3><p data-i18n="factsheet.preRelease">Pre-release</p></div>
+            <div class="fact-block"><h3 data-i18n="factsheet.genres">Genres</h3><p data-i18n="factsheet.genreList">Fast, action, adventure, roguelite, nature, robots</p></div>
+
+            <div class="fact-block social-media-block">
+              <h3 data-i18n="factsheet.socialMedia">You can connect with us here:</h3>
+              <div class="social-icons" aria-label="Leafborn social media" data-i18n-attr="aria-label:a11y.socialMedia">
+                <a href="https://www.instagram.com/leafborngame/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                <a href="https://x.com/LeafbornGame" target="_blank" rel="noopener" aria-label="X" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                <a href="https://discord.gg/J9mUnDV4tP" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="bi bi-discord" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@hasan.tarhan" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                <a href="mailto:contact@leafborngame.net" aria-label="Email contact@leafborngame.net" title="contact@leafborngame.net"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </section>
+
+          <article class="col-xl-8 narrative" id="descriptions">
+            <section>
+              <h2 data-i18n="pitch.heading">Pitch</h2>
+              <p data-i18n="pitch.body">Leafborn is a fast-paced action game where you command a being formed from thousands of leaves. Explore floating islands, discover abilities, change shape and destroy the Null robots draining the world’s life energy.</p>
+            </section>
+
+            <section>
+              <h2 data-i18n="description.heading">Description</h2>
+              <p data-i18n="description.intro">Take control of a living leaf-form and travel through Canopy, a universe of floating islands. Find new forms and abilities while fighting the invading Nulls before they strip the world of its remaining life.</p>
+
+              <h3 data-i18n="description.formsHeading">Shift Your Form, Rewrite the Rules</h3>
+              <p data-i18n="description.formsBody">Abilities change with your current form. Become a tornado that throws enemies aside or a saw that cuts directly through them, then combine forms and abilities into a playstyle of your own.</p>
+
+              <h3 data-i18n="description.runsHeading">Every Run, a New Horizon</h3>
+              <p data-i18n="description.runsBody">Choose branching routes between islands and face increasingly aggressive Null formations. Runs begin from zero, while long-term upgrades unlock forms, expand the loot pool and open unexplored paths through The Canopy.</p>
+
+              <p><strong data-i18n="description.pressAssets">Press Assets:</strong> <a href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="description.openDrive">Open the Google Drive folder ↗</a></p>
+            </section>
+
+            <section>
+              <h2 data-i18n="history.heading">History</h2>
+              <p data-i18n="history.p1">Hasan Tarhan began developing leaf-physics simulations in 2022. The work quickly drew attention from the game development community and was featured by outlets including 80 Level. He continued refining the system for several years, although his original goal was not to turn it into a game.</p>
+              <p data-i18n="history.p2">In 2025, Hasan shared a short tech-demo video titled Leaf Hero. It gained momentum almost immediately, reaching 130,000 views on YouTube and more than two million views across other social platforms. The project was reposted several times on Reddit, with a single post receiving over 5,000 upvotes.</p>
+              <p data-i18n="history.p3">By 2026, Hasan had begun developing the concept as a full game. The project has been in active development since November, and during this process he joined forces with his friends Alperen Altıkulaç and Aysu Hoşcan.</p>
+            </section>
+
+            <section>
+              <h2 data-i18n="features.heading">Features</h2>
+              <ul>
+                <li data-i18n="features.1">Control a shape-shifting swarm made of more than 10,000 leaves</li>
+                <li data-i18n="features.2">Discover new forms and transform</li>
+                <li data-i18n="features.3">Shred invading machines</li>
+                <li data-i18n="features.4">A fast-paced 3D action roguelite</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+
+        <hr>
+
+        <section class="content-section trailer-section" id="trailer">
+          <h2 data-i18n="trailer.heading">Trailer</h2>
+          <div class="trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/1GtMangEdsw?rel=0"
+              title="Trailer"
+              data-i18n-attr="title:trailer.heading"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="content-section" id="media">
+          <div class="section-heading-row">
+            <div><p class="section-kicker" data-i18n="media.kicker">Media</p><h2 data-i18n="media.heading">Screenshots</h2></div>
+            <a class="btn btn-outline-info btn-sm" href="https://cdn.impress.games/presskits/9cdea96530f71172c09994beea340566/screenshots.zip?t=1777238227" target="_blank" rel="noopener" data-i18n="media.download">Download all screenshots (2.89 Mb) ↓</a>
+          </div>
+          <div class="row g-3 media-grid">
+            <div class="col-md-6"><a href="press-assets/screenshot-1.png" target="_blank"><img src="press-assets/previews/screenshot-1.webp" alt="Leafborn gameplay screenshot 1" loading="lazy" data-i18n-attr="alt:a11y.screenshot1"></a></div>
+            <div class="col-md-6"><a href="press-assets/screenshot-2.png" target="_blank"><img src="press-assets/previews/screenshot-2.webp" alt="Leafborn gameplay screenshot 2" loading="lazy" data-i18n-attr="alt:a11y.screenshot2"></a></div>
+            <div class="col-md-6"><a href="press-assets/screenshot-3.png" target="_blank"><img src="press-assets/previews/screenshot-3.webp" alt="Leafborn gameplay screenshot 3" loading="lazy" data-i18n-attr="alt:a11y.screenshot3"></a></div>
+            <div class="col-md-6"><a href="press-assets/screenshot-4.png" target="_blank"><img src="press-assets/previews/screenshot-4.webp" alt="Leafborn gameplay screenshot 4" loading="lazy" data-i18n-attr="alt:a11y.screenshot4"></a></div>
+            <div class="col-md-6"><a href="press-assets/screenshot-5.png" target="_blank"><img src="press-assets/previews/screenshot-5.webp" alt="Leafborn gameplay screenshot 5" loading="lazy" data-i18n-attr="alt:a11y.screenshot5"></a></div>
+            <div class="col-md-6"><a href="press-assets/screenshot-6.png" target="_blank"><img src="press-assets/previews/screenshot-6.webp" alt="Leafborn gameplay screenshot 6" loading="lazy" data-i18n-attr="alt:a11y.screenshot6"></a></div>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="content-section" id="branding">
+          <div class="section-heading-row">
+            <div><p class="section-kicker" data-i18n="branding.kicker">Branding</p><h2 data-i18n="branding.heading">Logos</h2></div>
+            <a class="btn btn-outline-info btn-sm" href="https://cdn.impress.games/presskits/9cdea96530f71172c09994beea340566/logos.zip?t=1777238645" target="_blank" rel="noopener" data-i18n="branding.download">Download all logos (632.36 Kb) ↓</a>
+          </div>
+          <div class="row g-3 branding-grid">
+            <div class="col-md-8"><a href="press-assets/logo-wide.png" target="_blank"><img src="press-assets/logo-wide.webp" alt="Leafborn wordmark" loading="lazy" data-i18n-attr="alt:a11y.wordmark"></a></div>
+            <div class="col-md-4"><a href="press-assets/logo-mark.png" target="_blank"><img src="press-assets/previews/logo-mark.webp" alt="Leafborn logo mark" loading="lazy" data-i18n-attr="alt:a11y.logoMark"></a></div>
           </div>
 
-          <div class="hero-links" aria-label="Channels">
-            <a class="hl-link" href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=sharing" target="_blank" rel="noopener" title="Press Kit">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3 L 11 3 L 13 5 L 13 13 L 3 13 Z"/><path d="M11 3 L 11 5 L 13 5"/><path d="M5 8 L 11 8 M 5 10 L 9 10"/></svg>
-              <span>Press Kit</span>
-            </a>
-            <a class="hl-link" href="https://discord.gg/J9mUnDV4tP" target="_blank" rel="noopener" title="Discord">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.2 3.5 A11 11 0 0 0 10.5 2.7 L 10.3 3.1 A 10 10 0 0 0 7.5 3.1 L 7.3 2.7 A 11 11 0 0 0 4.6 3.5 C 2 7.3, 1.4 11, 1.7 14.6 A 11 11 0 0 0 4.9 16 L 5.6 15 A 8 8 0 0 1 4.4 14.4 L 4.6 14.2 A 8 8 0 0 0 13.2 14.2 L 13.4 14.4 A 8 8 0 0 1 12.2 15 L 12.9 16 A 11 11 0 0 0 16.1 14.6 C 16.5 10.4, 15.5 6.7, 13.2 3.5 Z M 6 12 C 5.2 12, 4.5 11.2, 4.5 10.2 C 4.5 9.2, 5.2 8.4, 6 8.4 C 6.8 8.4, 7.5 9.2, 7.5 10.2 C 7.5 11.2, 6.8 12, 6 12 Z M 10 12 C 9.2 12, 8.5 11.2, 8.5 10.2 C 8.5 9.2, 9.2 8.4, 10 8.4 C 10.8 8.4, 11.5 9.2, 11.5 10.2 C 11.5 11.2, 10.8 12, 10 12 Z"/></svg>
-              <span>Discord</span>
-            </a>
-            <a class="hl-link" href="https://www.instagram.com/leafborngame/" target="_blank" rel="noopener" title="Instagram">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11" rx="3"/><circle cx="8" cy="8" r="2.7"/><circle cx="11.4" cy="4.6" r="0.6" fill="currentColor"/></svg>
-              <span>Instagram</span>
-            </a>
-            <a class="hl-link" href="https://x.com/hasan_tarhann" target="_blank" rel="noopener" title="X">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.7 2.5 L 14 2.5 L 9.4 7.7 L 14.7 13.5 L 10.7 13.5 L 7.6 9.9 L 4.1 13.5 L 1.8 13.5 L 6.7 8 L 1.6 2.5 L 5.7 2.5 L 8.6 5.7 Z M 10.9 12.4 L 12.2 12.4 L 5.3 3.5 L 4 3.5 Z"/></svg>
-              <span>X</span>
-            </a>
+          <div class="key-art-heading">
+            <div>
+              <h3 data-i18n="branding.keyArtHeading">Key art</h3>
+              <p data-i18n="branding.keyArtHint">Select an image to open the full-resolution PNG.</p>
+            </div>
+            <a class="btn btn-outline-info btn-sm" href="press-assets/key-art.zip" download data-i18n="branding.keyArtDownload">Download all key art (PNG) ↓</a>
           </div>
-        </div>
-        <div class="hero-meta">
-          <div class="cell"><span class="k">Genre</span><span class="v">3D Roguelite</span></div>
-          <div class="cell"><span class="k">Platform</span><span class="v">Windows · Steam</span></div>
-        </div>
+          <div class="row g-3 key-art-grid">
+            <figure class="col-md-6">
+              <a href="press-assets/key-art/background.png" target="_blank"><img src="press-assets/key-art/background.webp" alt="Leafborn key art background" loading="lazy" data-i18n-attr="alt:a11y.keyArtBackground"></a>
+              <figcaption data-i18n="branding.keyArtBackground">Background</figcaption>
+            </figure>
+            <figure class="col-md-6">
+              <a href="press-assets/key-art/capsule-main.png" target="_blank"><img src="press-assets/key-art/capsule-main.webp" alt="Leafborn horizontal key art" loading="lazy" data-i18n-attr="alt:a11y.keyArtHorizontal"></a>
+              <figcaption data-i18n="branding.keyArtHorizontal">Horizontal key art</figcaption>
+            </figure>
+            <figure class="col-md-6">
+              <a href="press-assets/key-art/capsule-vertical.png" target="_blank"><img src="press-assets/key-art/capsule-vertical.webp" alt="Leafborn vertical key art" loading="lazy" data-i18n-attr="alt:a11y.keyArtVertical"></a>
+              <figcaption data-i18n="branding.keyArtVertical">Vertical key art</figcaption>
+            </figure>
+            <figure class="col-md-6">
+              <a href="press-assets/key-art/logo-transparent.png" target="_blank"><img src="press-assets/key-art/logo-transparent.webp" alt="Leafborn transparent wordmark" loading="lazy" data-i18n-attr="alt:a11y.keyArtLogo"></a>
+              <figcaption data-i18n="branding.keyArtLogo">Transparent wordmark</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <hr>
+
+        <section class="content-section credits" id="credits">
+          <p class="section-kicker" data-i18n="credits.kicker">Credits</p>
+          <h2 data-i18n="credits.heading">Team</h2>
+          <div class="credit-row"><div><strong>Hasan Tarhan</strong><span data-i18n="credits.gameDeveloper">Game Programmer</span></div></div>
+          <div class="credit-row"><div><strong>Alperen Altıkulaç</strong><span data-i18n="credits.3dArtist">3D Artist</span></div><a href="https://www.artstation.com/alperenaltklc?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">ArtStation ↗</a></div>
+          <div class="credit-row"><div><strong>Aysu Hoşcan</strong><span data-i18n="credits.3dArtist">3D Artist</span></div><a href="https://www.artstation.com/progjent?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">ArtStation ↗</a></div>
+        </section>
       </div>
-
-      <div class="hero-art">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
-        <img src="img/hero.gif" alt="The Leafborn, leaves drifting between sky-island ruins"/>
-      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- TRAILER -->
-  <section class="section wrap" id="trailer" data-screen-label="02 Trailer" style="padding-top: 32px;">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Trailer</div>
-        <h2 style="margin-top: 8px;">One minute. Current build.</h2>
-      </div>
-    </div>
-    <div class="trailer-frame">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/1GtMangEdsw?rel=0&modestbranding=1"
-        title="Leafborn Trailer"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-    </div>
-  </section>
+  <footer class="container press-footer"><a href="#press-content" data-i18n="footer.backToTop">Back to top ↑</a></footer>
 
-  <!-- GALLERY -->
-  <section class="section wrap" data-screen-label="03 Gallery" style="padding-top: 0;">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Screenshots</div>
-        <h2 style="margin-top: 8px;">A glimpse of the sky.</h2>
-      </div>
-      <p class="lede">Captures from the current build. WIP, getting prettier weekly.</p>
-    </div>
-    <div class="gallery">
-      <div class="tile wide"><img src="img/shot1.webp" alt="Sky grove at morning"/></div>
-      <div class="tile"><img src="img/shot2.webp" alt="Crimson biome"/></div>
-      <div class="tile"><img src="img/shot3.webp" alt="A Null encounter"/></div>
-      <div class="tile"><img src="img/shot4.webp" alt="Twilight biome"/></div>
-      <div class="tile wide"><img src="img/shot5.webp" alt="Nulls advancing"/></div>
-      <div class="tile"><img src="img/shot6.webp" alt="Scout form resting"/></div>
-    </div>
-  </section>
+  <script src="presskit-i18n.js"></script>
+  <script>
+    (function () {
+      const entries = Array.from(document.querySelectorAll('.section-nav .nav-link'))
+        .map(function (link) { return { link: link, section: document.querySelector(link.getAttribute('href')) }; })
+        .filter(function (entry) { return entry.section; });
 
-</main>
+      function updateActiveSection() {
+        const marker = window.innerHeight * 0.3;
+        const active = entries.reduce(function (closest, entry) {
+          return Math.abs(entry.section.getBoundingClientRect().top - marker) < Math.abs(closest.section.getBoundingClientRect().top - marker) ? entry : closest;
+        });
 
-<div id="site-footer"></div>
-<div id="steam-widget-mount"></div>
+        entries.forEach(function (entry) {
+          const isActive = entry === active;
+          entry.link.classList.toggle('is-active', isActive);
+          if (isActive) entry.link.setAttribute('aria-current', 'location');
+          else entry.link.removeAttribute('aria-current');
+        });
+      }
 
-<script src="site.js"></script>
+      window.addEventListener('scroll', updateActiveSection, { passive: true });
+      window.addEventListener('resize', updateActiveSection);
+      updateActiveSection();
+    }());
+  </script>
 </body>
 </html>
