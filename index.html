@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="presskit-clean.css">
+  <link rel="stylesheet" href="leaf-cursor-trail.css">
 </head>
 <body>
   <a class="skip-link" href="#press-content" data-i18n="a11y.skip">Skip to content</a>
@@ -49,48 +50,48 @@
         <nav class="section-nav nav flex-column" aria-label="Press kit sections" data-i18n-attr="aria-label:a11y.sectionNav">
           <a class="nav-link" href="#trailer" data-i18n="trailer.heading">Trailer</a>
           <a class="nav-link" href="#media" data-i18n="nav.media">Media</a>
-          <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
-          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
           <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
+          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
+          <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
           <a class="nav-link" href="#credits" data-i18n="nav.credits">Credits</a>
         </nav>
 
         <a class="download-all btn btn-outline-info w-100" href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="actions.downloadImages">View press materials</a>
         <a class="sidebar-steam btn btn-success w-100" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=presskit&amp;utm_medium=sidebar" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span data-i18n="actions.viewSteam">View on Steam</span></a>
+
+        <section class="sidebar-factsheet" id="factsheet">
+          <h2 data-i18n="factsheet.heading">Factsheet</h2>
+
+          <dl class="fact-list">
+            <div><dt data-i18n="factsheet.developerPublisher">Developer &amp; Publisher</dt><dd>Green Cat Games</dd></div>
+            <div><dt data-i18n="factsheet.basedIn">Based in</dt><dd data-i18n="factsheet.location">Türkiye</dd></div>
+          </dl>
+
+          <div class="fact-block">
+            <h3 data-i18n="factsheet.platform">Platform</h3>
+            <a class="platform-pill btn btn-dark btn-sm d-inline-flex align-items-center gap-2" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span>Steam</span></a>
+          </div>
+
+          <div class="fact-block"><h3 data-i18n="factsheet.engine">Engine</h3><p>Unity 6 URP</p></div>
+          <div class="fact-block"><h3 data-i18n="factsheet.releaseStatus">Release Status</h3><p data-i18n="factsheet.preRelease">Pre-release</p></div>
+          <div class="fact-block"><h3 data-i18n="factsheet.genres">Genres</h3><p data-i18n="factsheet.genreList">Fast, action, adventure, roguelite, nature, robots</p></div>
+
+          <div class="fact-block social-media-block">
+            <h3 data-i18n="factsheet.socialMedia">You can connect with us here:</h3>
+            <div class="social-icons" aria-label="Leafborn social media" data-i18n-attr="aria-label:a11y.socialMedia">
+              <a href="https://www.instagram.com/leafborngame/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+              <a href="https://x.com/LeafbornGame" target="_blank" rel="noopener" aria-label="X" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+              <a href="https://discord.gg/J9mUnDV4tP" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="bi bi-discord" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/@hasan.tarhan" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+              <a href="mailto:contact@leafborngame.net" aria-label="Email contact@leafborngame.net" title="contact@leafborngame.net"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </section>
       </aside>
 
       <div class="col-lg-9 press-body">
         <div class="row g-4 g-xl-5" id="descriptions-row">
-          <section class="col-xl-4" id="factsheet">
-            <h2 data-i18n="factsheet.heading">Factsheet</h2>
-
-            <dl class="fact-list">
-              <div><dt data-i18n="factsheet.developerPublisher">Developer &amp; Publisher</dt><dd>Green Cat Games</dd></div>
-              <div><dt data-i18n="factsheet.basedIn">Based in</dt><dd data-i18n="factsheet.location">Türkiye</dd></div>
-            </dl>
-
-            <div class="fact-block">
-              <h3 data-i18n="factsheet.platform">Platform</h3>
-              <a class="platform-pill btn btn-dark btn-sm d-inline-flex align-items-center gap-2" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span>Steam</span></a>
-            </div>
-
-            <div class="fact-block"><h3 data-i18n="factsheet.engine">Engine</h3><p>Unity 6 URP</p></div>
-            <div class="fact-block"><h3 data-i18n="factsheet.releaseStatus">Release Status</h3><p data-i18n="factsheet.preRelease">Pre-release</p></div>
-            <div class="fact-block"><h3 data-i18n="factsheet.genres">Genres</h3><p data-i18n="factsheet.genreList">Fast, action, adventure, roguelite, nature, robots</p></div>
-
-            <div class="fact-block social-media-block">
-              <h3 data-i18n="factsheet.socialMedia">You can connect with us here:</h3>
-              <div class="social-icons" aria-label="Leafborn social media" data-i18n-attr="aria-label:a11y.socialMedia">
-                <a href="https://www.instagram.com/leafborngame/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-                <a href="https://x.com/LeafbornGame" target="_blank" rel="noopener" aria-label="X" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-                <a href="https://discord.gg/J9mUnDV4tP" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="bi bi-discord" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/@hasan.tarhan" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-                <a href="mailto:contact@leafborngame.net" aria-label="Email contact@leafborngame.net" title="contact@leafborngame.net"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </section>
-
-          <article class="col-xl-8 narrative" id="descriptions">
+          <article class="col-12 narrative" id="descriptions">
             <section>
               <h2 data-i18n="pitch.heading">Pitch</h2>
               <p data-i18n="pitch.body">Leafborn is a fast-paced action game where you command a being formed from thousands of leaves. Explore floating islands, discover abilities, change shape and destroy the Null robots draining the world’s life energy.</p>
@@ -111,9 +112,9 @@
 
             <section>
               <h2 data-i18n="history.heading">History</h2>
-              <p data-i18n="history.p1">Hasan Tarhan began developing leaf-physics simulations in 2022. The work quickly drew attention from the game development community and was featured by outlets including 80 Level. He continued refining the system for several years, although his original goal was not to turn it into a game.</p>
-              <p data-i18n="history.p2">In 2025, Hasan shared a short tech-demo video titled Leaf Hero. It gained momentum almost immediately, reaching 130,000 views on YouTube and more than two million views across other social platforms. The project was reposted several times on Reddit, with a single post receiving over 5,000 upvotes.</p>
-              <p data-i18n="history.p3">By 2026, Hasan had begun developing the concept as a full game. The project has been in active development since November, and during this process he joined forces with his friends Alperen Altıkulaç and Aysu Hoşcan.</p>
+              <p><span data-i18n="history.p1Before">Hasan Tarhan began developing </span><a href="https://80.lv/articles/a-custom-leaf-physics-solution-for-unity" target="_blank" rel="noopener" data-i18n="history.p1Link">leaf-physics simulations</a><span data-i18n="history.p1After"> in 2022. The work quickly drew attention from the game development community and was featured by outlets including 80 Level. He continued refining the system for several years, although his original goal was not to turn it into a game.</span></p>
+              <p><span data-i18n="history.p2Before">In 2025, Hasan shared a short tech-demo video titled </span><a href="https://80.lv/articles/check-out-this-cool-programmable-physics-based-leaf-particle-system" target="_blank" rel="noopener" data-i18n="history.p2Link">Leaf Hero</a><span data-i18n="history.p2After">. It gained momentum almost immediately, reaching 130,000 views on YouTube and more than two million views across other social platforms. The project was reposted several times on Reddit, with a single post receiving over 5,000 upvotes.</span></p>
+              <p><span data-i18n="history.p3Before">By 2026, Hasan had begun developing the concept as a full game. The project has been in active development since November, and during this process he joined forces with his friends </span><strong><a href="https://www.artstation.com/alperenaltklc?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">Alperen Altıkulaç</a></strong><span data-i18n="history.p3Between"> and </span><strong><a href="https://www.artstation.com/progjent?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">Aysu Hoşcan</a></strong><span data-i18n="history.p3After">.</span></p>
             </section>
 
             <section>
@@ -229,7 +230,7 @@
         <section class="content-section credits" id="credits">
           <p class="section-kicker" data-i18n="credits.kicker">Credits</p>
           <h2 data-i18n="credits.heading">Team</h2>
-          <div class="credit-row"><div><strong>Hasan Tarhan</strong><span data-i18n="credits.gameDeveloper">Game Programmer</span></div></div>
+          <div class="credit-row"><div><strong>Hasan Tarhan</strong><span data-i18n="credits.gameDeveloper">Game Programmer</span></div><a href="https://www.hasantarhan.com/" target="_blank" rel="noopener" data-i18n="credits.website">Official Web Site ↗</a></div>
           <div class="credit-row"><div><strong>Alperen Altıkulaç</strong><span data-i18n="credits.3dArtist">3D Artist</span></div><a href="https://www.artstation.com/alperenaltklc?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">ArtStation ↗</a></div>
           <div class="credit-row"><div><strong>Aysu Hoşcan</strong><span data-i18n="credits.3dArtist">3D Artist</span></div><a href="https://www.artstation.com/progjent?utm_source=impress&amp;utm_medium=presskit" target="_blank" rel="noopener">ArtStation ↗</a></div>
         </section>
@@ -240,16 +241,17 @@
   <footer class="container press-footer"><a href="#press-content" data-i18n="footer.backToTop">Back to top ↑</a></footer>
 
   <script src="presskit-i18n.js"></script>
+  <script src="leaf-cursor-trail.js"></script>
   <script>
     (function () {
       const pressBody = document.querySelector('.press-body');
-      const sections = ['trailer', 'media', 'branding', 'press', 'credits']
+      const pressSidebar = document.querySelector('.press-sidebar');
+      const sections = ['trailer', 'media', 'press', 'descriptions-row', 'branding', 'credits']
         .map(function (id) { return document.getElementById(id); });
-      const descriptionsRow = document.getElementById('descriptions-row');
       const separators = Array.from(pressBody.querySelectorAll(':scope > hr'));
 
       separators.forEach(function (separator) { separator.remove(); });
-      sections.concat(descriptionsRow).forEach(function (section, index, orderedSections) {
+      sections.forEach(function (section, index, orderedSections) {
         pressBody.append(section);
         if (index < orderedSections.length - 1) pressBody.append(separators[index]);
       });
@@ -273,9 +275,19 @@
         });
       }
 
+      function updateSidebarStickiness() {
+        const viewportGap = 48;
+        pressSidebar.classList.toggle('can-stick', pressSidebar.scrollHeight <= window.innerHeight - viewportGap);
+      }
+
       window.addEventListener('scroll', updateActiveSection, { passive: true });
-      window.addEventListener('resize', updateActiveSection);
+      window.addEventListener('resize', function () {
+        updateActiveSection();
+        updateSidebarStickiness();
+      });
+      new ResizeObserver(updateSidebarStickiness).observe(pressSidebar);
       updateActiveSection();
+      updateSidebarStickiness();
     }());
   </script>
 </body>
