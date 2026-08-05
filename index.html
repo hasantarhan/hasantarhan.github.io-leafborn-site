@@ -48,6 +48,7 @@
 
         <nav class="section-nav nav flex-column" aria-label="Press kit sections" data-i18n-attr="aria-label:a11y.sectionNav">
           <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
+          <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
           <a class="nav-link" href="#trailer" data-i18n="trailer.heading">Trailer</a>
           <a class="nav-link" href="#media" data-i18n="nav.media">Media</a>
           <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
@@ -128,6 +129,31 @@
         </div>
 
         <hr>
+
+        <section class="press-coverage" id="press">
+          <div class="row g-3 align-items-end mb-4">
+            <div class="col-md-6">
+              <p class="section-kicker" data-i18n="press.kicker">Press coverage</p>
+              <h2 class="mb-0" data-i18n="press.heading">Leafborn in the world press</h2>
+            </div>
+            <p class="col-md-6 mb-0 text-md-end press-coverage-intro" data-i18n="press.intro">Featured by gaming outlets across Japan, North America, Europe, Türkiye and beyond.</p>
+          </div>
+
+          <ul class="press-source-list list-unstyled d-flex flex-wrap align-items-baseline gap-2 gap-md-3 mb-0" aria-label="Selected press coverage" data-i18n-attr="aria-label:press.selectedLabel">
+            <li class="press-source-item"><a class="press-source-link" href="https://www.ign.com/games/leafborn" target="_blank" rel="noopener">IGN <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://www.famitsu.com/article/202605/74815" target="_blank" rel="noopener">Famitsu <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://news.denfaminicogamer.jp/tag/leafborn" target="_blank" rel="noopener">Denfaminicogamer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://80.lv/articles/play-as-shapeshifting-leaf-creature-in-this-fast-paced-roguelite-action-game" target="_blank" rel="noopener">80 Level <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://automaton-media.com/articles/newsjp/20260515-443303/" target="_blank" rel="noopener">AUTOMATON <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://www.gamespark.jp/article/2026/05/18/166576.html" target="_blank" rel="noopener">Game*Spark <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://nichegamer.com/leafborn-announced/" target="_blank" rel="noopener">Niche Gamer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://game.udn.com/game/story/122089/9469457" target="_blank" rel="noopener">udn Game <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://oyungezer.com.tr/haber/yerli-oyun-leafborn-japonlarin-ilgisini-cekmeyi-basardi/detay" target="_blank" rel="noopener">Oyungezer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+            <li class="press-source-item"><a class="press-source-link" href="https://www.turunculevye.com/turk-oyunu-leafborn-japon-oyuncular-ilgi-yogunlugu/" target="_blank" rel="noopener">Turuncu Levye <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
+          </ul>
+        </section>
+
+        <hr class="press-coverage-divider">
 
         <section class="content-section trailer-section" id="trailer">
           <h2 data-i18n="trailer.heading">Trailer</h2>
@@ -222,9 +248,10 @@
 
       function updateActiveSection() {
         const marker = window.innerHeight * 0.3;
-        const active = entries.reduce(function (closest, entry) {
-          return Math.abs(entry.section.getBoundingClientRect().top - marker) < Math.abs(closest.section.getBoundingClientRect().top - marker) ? entry : closest;
+        const passedEntries = entries.filter(function (entry) {
+          return entry.section.getBoundingClientRect().top <= marker;
         });
+        const active = passedEntries.length ? passedEntries[passedEntries.length - 1] : entries[0];
 
         entries.forEach(function (entry) {
           const isActive = entry === active;
