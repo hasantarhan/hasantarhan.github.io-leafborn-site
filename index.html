@@ -47,20 +47,20 @@
         <p class="publisher"><span data-i18n="sidebar.by">By</span> Green Cat Games</p>
 
         <nav class="section-nav nav flex-column" aria-label="Press kit sections" data-i18n-attr="aria-label:a11y.sectionNav">
-          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
-          <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
           <a class="nav-link" href="#trailer" data-i18n="trailer.heading">Trailer</a>
           <a class="nav-link" href="#media" data-i18n="nav.media">Media</a>
           <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
+          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
+          <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
           <a class="nav-link" href="#credits" data-i18n="nav.credits">Credits</a>
         </nav>
 
-        <a class="download-all btn btn-success w-100" href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="actions.downloadImages">Open the Google Drive folder</a>
-        <a class="sidebar-steam btn btn-outline-light w-100" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=presskit&amp;utm_medium=sidebar" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span data-i18n="actions.viewSteam">View on Steam</span></a>
+        <a class="download-all btn btn-outline-info w-100" href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="actions.downloadImages">View press materials</a>
+        <a class="sidebar-steam btn btn-success w-100" href="https://store.steampowered.com/app/4247440/Leafborn/?utm_source=presskit&amp;utm_medium=sidebar" target="_blank" rel="noopener"><i class="bi bi-steam" aria-hidden="true"></i><span data-i18n="actions.viewSteam">View on Steam</span></a>
       </aside>
 
       <div class="col-lg-9 press-body">
-        <div class="row g-4 g-xl-5">
+        <div class="row g-4 g-xl-5" id="descriptions-row">
           <section class="col-xl-4" id="factsheet">
             <h2 data-i18n="factsheet.heading">Factsheet</h2>
 
@@ -106,7 +106,7 @@
               <h3 data-i18n="description.runsHeading">Every Run, a New Horizon</h3>
               <p data-i18n="description.runsBody">Choose branching routes between islands and face increasingly aggressive Null formations. Runs begin from zero, while long-term upgrades unlock forms, expand the loot pool and open unexplored paths through The Canopy.</p>
 
-              <p><strong data-i18n="description.pressAssets">Press Assets:</strong> <a href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="description.openDrive">Open the Google Drive folder ↗</a></p>
+              <p><strong data-i18n="description.pressAssets">Press Assets:</strong> <a href="https://drive.google.com/drive/folders/15gKPdIHlTpyjEYhTx8Up7fSwOddZMytq?usp=drive_link" target="_blank" rel="noopener" data-i18n="description.openDrive">View press materials ↗</a></p>
             </section>
 
             <section>
@@ -242,6 +242,18 @@
   <script src="presskit-i18n.js"></script>
   <script>
     (function () {
+      const pressBody = document.querySelector('.press-body');
+      const sections = ['trailer', 'media', 'branding', 'press', 'credits']
+        .map(function (id) { return document.getElementById(id); });
+      const descriptionsRow = document.getElementById('descriptions-row');
+      const separators = Array.from(pressBody.querySelectorAll(':scope > hr'));
+
+      separators.forEach(function (separator) { separator.remove(); });
+      sections.concat(descriptionsRow).forEach(function (section, index, orderedSections) {
+        pressBody.append(section);
+        if (index < orderedSections.length - 1) pressBody.append(separators[index]);
+      });
+
       const entries = Array.from(document.querySelectorAll('.section-nav .nav-link'))
         .map(function (link) { return { link: link, section: document.querySelector(link.getAttribute('href')) }; })
         .filter(function (entry) { return entry.section; });
