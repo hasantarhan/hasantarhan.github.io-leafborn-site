@@ -8,7 +8,7 @@
     tr: {
       'meta.title': 'Leafborn',
       'meta.description': 'Green Cat Games tarafından hazırlanan resmi Leafborn basın kiti: bilgiler, açıklamalar, medya, marka materyalleri ve ekip.',
-      'meta.ogTitle': 'Leafborn — Basın Kiti',
+      'meta.ogTitle': 'Leafborn',
       'meta.ogDescription': 'Binlerce yapraktan oluşan ve şekil değiştirebilen bir varlığı konu alan hızlı tempolu bir aksiyon oyunu.',
       'a11y.skip': 'İçeriğe geç',
       'a11y.banner': 'Leafborn ana görseli',
@@ -92,7 +92,7 @@
     de: {
       'meta.title': 'Leafborn',
       'meta.description': 'Das offizielle Leafborn-Pressekit von Green Cat Games: Fakten, Beschreibungen, Medien, Markenmaterial und Mitwirkende.',
-      'meta.ogTitle': 'Leafborn — Pressekit',
+      'meta.ogTitle': 'Leafborn',
       'meta.ogDescription': 'Ein rasantes Actionspiel über ein formwandelndes Wesen aus Tausenden von Blättern.',
       'a11y.skip': 'Zum Inhalt springen',
       'a11y.banner': 'Leafborn-Key-Art',
@@ -186,7 +186,7 @@
     fr: {
       'meta.title': 'Leafborn',
       'meta.description': 'Le kit presse officiel de Leafborn par Green Cat Games : informations, descriptions, médias, éléments de marque et crédits.',
-      'meta.ogTitle': 'Leafborn — Kit presse',
+      'meta.ogTitle': 'Leafborn',
       'meta.ogDescription': 'Un jeu d’action effréné dans lequel vous incarnez une créature métamorphe composée de milliers de feuilles.',
       'a11y.skip': 'Aller au contenu',
       'a11y.banner': 'Illustration principale de Leafborn',
@@ -280,7 +280,7 @@
     'pt-BR': {
       'meta.title': 'Leafborn',
       'meta.description': 'Kit de imprensa oficial de Leafborn, da Green Cat Games: informações, descrições, mídia, materiais de marca e créditos.',
-      'meta.ogTitle': 'Leafborn — Kit de imprensa',
+      'meta.ogTitle': 'Leafborn',
       'meta.ogDescription': 'Um jogo de ação frenético sobre uma criatura metamorfa formada por milhares de folhas.',
       'a11y.skip': 'Ir para o conteúdo',
       'a11y.banner': 'Arte principal de Leafborn',
@@ -374,7 +374,7 @@
     ru: {
       'meta.title': 'Leafborn',
       'meta.description': 'Официальный пресс-кит Leafborn от Green Cat Games: факты, описания, медиаматериалы, фирменная графика и информация об авторах.',
-      'meta.ogTitle': 'Leafborn — Пресс-кит',
+      'meta.ogTitle': 'Leafborn',
       'meta.ogDescription': 'Динамичный экшен о меняющем форму существе, состоящем из тысяч листьев.',
       'a11y.skip': 'Перейти к содержимому',
       'a11y.banner': 'Ключевая иллюстрация Leafborn',
