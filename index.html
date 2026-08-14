@@ -26,9 +26,22 @@
 
   <header class="press-banner" aria-label="Leafborn key art" data-i18n-attr="aria-label:a11y.banner">
     <img src="press-assets/key-art/background.webp" alt="Leafborn facing a Null robot in the world of Canopy" data-i18n-attr="alt:a11y.bannerAlt">
-    <div class="language-picker">
-      <label for="language-select" data-i18n="language.label">Language</label>
-      <select id="language-select" class="form-select form-select-sm" data-bs-theme="dark" aria-label="Language" data-i18n-attr="aria-label:language.label">
+    <details class="language-picker">
+      <label class="visually-hidden" for="language-select" data-i18n="language.label">Language</label>
+      <summary class="language-trigger" aria-label="Language">
+        <i class="bi bi-globe2" aria-hidden="true"></i>
+        <span class="language-current-code">EN</span>
+        <i class="bi bi-chevron-up language-chevron" aria-hidden="true"></i>
+      </summary>
+      <div class="language-menu" id="language-menu" role="listbox" aria-label="Language options">
+        <button type="button" role="option" data-language="en"><span class="language-flag flag-us" aria-hidden="true"></span><span>US</span><strong>EN</strong></button>
+        <button type="button" role="option" data-language="tr"><span class="language-flag flag-tr" aria-hidden="true"></span><span>TR</span><strong>TR</strong></button>
+        <button type="button" role="option" data-language="de"><span class="language-flag flag-de" aria-hidden="true"></span><span>DE</span><strong>DE</strong></button>
+        <button type="button" role="option" data-language="fr"><span class="language-flag flag-fr" aria-hidden="true"></span><span>FR</span><strong>FR</strong></button>
+        <button type="button" role="option" data-language="pt-BR"><span class="language-flag flag-br" aria-hidden="true"></span><span>BR</span><strong>PT</strong></button>
+        <button type="button" role="option" data-language="ru"><span class="language-flag flag-ru" aria-hidden="true"></span><span>RU</span><strong>RU</strong></button>
+      </div>
+      <select id="language-select" class="language-native-select" tabindex="-1" aria-hidden="true" data-i18n-attr="aria-label:language.label">
         <option value="en">English</option>
         <option value="tr">Türkçe</option>
         <option value="de">Deutsch</option>
@@ -36,7 +49,7 @@
         <option value="pt-BR">Português (Brasil)</option>
         <option value="ru">Русский</option>
       </select>
-    </div>
+    </details>
   </header>
 
   <main class="container press-layout" id="press-content">
@@ -49,10 +62,10 @@
         <p class="publisher"><span data-i18n="sidebar.by">By</span> Green Cat Games</p>
 
         <nav class="section-nav nav flex-column" aria-label="Press kit sections" data-i18n-attr="aria-label:a11y.sectionNav">
+          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
+          <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
           <a class="nav-link" href="#trailer" data-i18n="trailer.heading">Trailer</a>
           <a class="nav-link" href="#media" data-i18n="nav.media">Media</a>
-          <a class="nav-link" href="#press" data-i18n="nav.press">Press</a>
-          <a class="nav-link" href="#descriptions" data-i18n="nav.descriptions">Descriptions</a>
           <a class="nav-link" href="#branding" data-i18n="nav.branding">Branding</a>
           <a class="nav-link" href="#credits" data-i18n="nav.credits">Credits</a>
         </nav>
@@ -141,18 +154,34 @@
             <p class="col-md-6 mb-0 text-md-end press-coverage-intro" data-i18n="press.intro">Featured by gaming outlets across Japan, North America, Europe, Türkiye and beyond.</p>
           </div>
 
-          <ul class="press-source-list list-unstyled d-flex flex-wrap align-items-baseline gap-2 gap-md-3 mb-0" aria-label="Selected press coverage" data-i18n-attr="aria-label:press.selectedLabel">
-            <li class="press-source-item"><a class="press-source-link" href="https://www.ign.com/games/leafborn" target="_blank" rel="noopener">IGN <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://www.famitsu.com/article/202605/74815" target="_blank" rel="noopener">Famitsu <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://news.denfaminicogamer.jp/tag/leafborn" target="_blank" rel="noopener">Denfaminicogamer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://80.lv/articles/play-as-shapeshifting-leaf-creature-in-this-fast-paced-roguelite-action-game" target="_blank" rel="noopener">80 Level <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://automaton-media.com/articles/newsjp/20260515-443303/" target="_blank" rel="noopener">AUTOMATON <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://www.gamespark.jp/article/2026/05/18/166576.html" target="_blank" rel="noopener">Game*Spark <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://nichegamer.com/leafborn-announced/" target="_blank" rel="noopener">Niche Gamer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://game.udn.com/game/story/122089/9469457" target="_blank" rel="noopener">udn Game <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://oyungezer.com.tr/haber/yerli-oyun-leafborn-japonlarin-ilgisini-cekmeyi-basardi/detay" target="_blank" rel="noopener">Oyungezer <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-            <li class="press-source-item"><a class="press-source-link" href="https://www.turunculevye.com/turk-oyunu-leafborn-japon-oyuncular-ilgi-yogunlugu/" target="_blank" rel="noopener">Turuncu Levye <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></li>
-          </ul>
+          <div class="press-logo-marquee" aria-label="Selected press coverage" data-i18n-attr="aria-label:press.selectedLabel">
+            <div class="press-logo-track">
+              <ul class="press-logo-list list-unstyled mb-0">
+                <li><a class="press-logo-link" href="https://www.ign.com/games/leafborn" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on IGN" title="IGN"><img src="https://www.google.com/s2/favicons?domain=ign.com&amp;sz=128" alt=""><span class="press-logo-name">IGN</span></a></li>
+                <li><a class="press-logo-link" href="https://www.famitsu.com/article/202605/74815" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Famitsu" title="Famitsu"><img src="https://www.google.com/s2/favicons?domain=famitsu.com&amp;sz=128" alt=""><span class="press-logo-name">Famitsu</span></a></li>
+                <li><a class="press-logo-link" href="https://news.denfaminicogamer.jp/tag/leafborn" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Denfaminicogamer" title="Denfaminicogamer"><img src="https://www.google.com/s2/favicons?domain=news.denfaminicogamer.jp&amp;sz=128" alt=""><span class="press-logo-name">Denfaminicogamer</span></a></li>
+                <li><a class="press-logo-link" href="https://80.lv/articles/play-as-shapeshifting-leaf-creature-in-this-fast-paced-roguelite-action-game" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on 80 Level" title="80 Level"><img src="https://www.google.com/s2/favicons?domain=80.lv&amp;sz=128" alt=""><span class="press-logo-name">80 Level</span></a></li>
+                <li><a class="press-logo-link" href="https://automaton-media.com/articles/newsjp/20260515-443303/" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on AUTOMATON" title="AUTOMATON"><img src="https://www.google.com/s2/favicons?domain=automaton-media.com&amp;sz=128" alt=""><span class="press-logo-name">AUTOMATON</span></a></li>
+                <li><a class="press-logo-link" href="https://www.gamespark.jp/article/2026/05/18/166576.html" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Game*Spark" title="Game*Spark"><img src="https://www.google.com/s2/favicons?domain=gamespark.jp&amp;sz=128" alt=""><span class="press-logo-name">Game*Spark</span></a></li>
+                <li><a class="press-logo-link" href="https://nichegamer.com/leafborn-announced/" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Niche Gamer" title="Niche Gamer"><img src="https://www.google.com/s2/favicons?domain=nichegamer.com&amp;sz=128" alt=""><span class="press-logo-name">Niche Gamer</span></a></li>
+                <li><a class="press-logo-link" href="https://game.udn.com/game/story/122089/9469457" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on udn Game" title="udn Game"><img src="https://www.google.com/s2/favicons?domain=game.udn.com&amp;sz=128" alt=""><span class="press-logo-name">udn Game</span></a></li>
+                <li><a class="press-logo-link" href="https://oyungezer.com.tr/haber/yerli-oyun-leafborn-japonlarin-ilgisini-cekmeyi-basardi/detay" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Oyungezer" title="Oyungezer"><img src="https://www.google.com/s2/favicons?domain=oyungezer.com.tr&amp;sz=128" alt=""><span class="press-logo-name">Oyungezer</span></a></li>
+                <li><a class="press-logo-link" href="https://www.turunculevye.com/turk-oyunu-leafborn-japon-oyuncular-ilgi-yogunlugu/" target="_blank" rel="noopener" aria-label="Read Leafborn coverage on Turuncu Levye" title="Turuncu Levye"><img src="https://www.google.com/s2/favicons?domain=turunculevye.com&amp;sz=128" alt=""><span class="press-logo-name">Turuncu Levye</span></a></li>
+              </ul>
+              <ul class="press-logo-list list-unstyled mb-0" aria-hidden="true">
+                <li><a class="press-logo-link" href="https://www.ign.com/games/leafborn" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=ign.com&amp;sz=128" alt=""><span class="press-logo-name">IGN</span></a></li>
+                <li><a class="press-logo-link" href="https://www.famitsu.com/article/202605/74815" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=famitsu.com&amp;sz=128" alt=""><span class="press-logo-name">Famitsu</span></a></li>
+                <li><a class="press-logo-link" href="https://news.denfaminicogamer.jp/tag/leafborn" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=news.denfaminicogamer.jp&amp;sz=128" alt=""><span class="press-logo-name">Denfaminicogamer</span></a></li>
+                <li><a class="press-logo-link" href="https://80.lv/articles/play-as-shapeshifting-leaf-creature-in-this-fast-paced-roguelite-action-game" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=80.lv&amp;sz=128" alt=""><span class="press-logo-name">80 Level</span></a></li>
+                <li><a class="press-logo-link" href="https://automaton-media.com/articles/newsjp/20260515-443303/" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=automaton-media.com&amp;sz=128" alt=""><span class="press-logo-name">AUTOMATON</span></a></li>
+                <li><a class="press-logo-link" href="https://www.gamespark.jp/article/2026/05/18/166576.html" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=gamespark.jp&amp;sz=128" alt=""><span class="press-logo-name">Game*Spark</span></a></li>
+                <li><a class="press-logo-link" href="https://nichegamer.com/leafborn-announced/" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=nichegamer.com&amp;sz=128" alt=""><span class="press-logo-name">Niche Gamer</span></a></li>
+                <li><a class="press-logo-link" href="https://game.udn.com/game/story/122089/9469457" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=game.udn.com&amp;sz=128" alt=""><span class="press-logo-name">udn Game</span></a></li>
+                <li><a class="press-logo-link" href="https://oyungezer.com.tr/haber/yerli-oyun-leafborn-japonlarin-ilgisini-cekmeyi-basardi/detay" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=oyungezer.com.tr&amp;sz=128" alt=""><span class="press-logo-name">Oyungezer</span></a></li>
+                <li><a class="press-logo-link" href="https://www.turunculevye.com/turk-oyunu-leafborn-japon-oyuncular-ilgi-yogunlugu/" target="_blank" rel="noopener" tabindex="-1"><img src="https://www.google.com/s2/favicons?domain=turunculevye.com&amp;sz=128" alt=""><span class="press-logo-name">Turuncu Levye</span></a></li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <hr class="press-coverage-divider">
@@ -245,9 +274,48 @@
   <script src="leaf-cursor-trail.js"></script>
   <script>
     (function () {
+      const languagePicker = document.querySelector('.language-picker');
+      const languageTrigger = document.querySelector('.language-trigger');
+      const languageMenu = document.querySelector('.language-menu');
+      const languageSelect = document.getElementById('language-select');
+      const languageOptions = Array.from(document.querySelectorAll('.language-menu [data-language]'));
+
+      function syncLanguageMenu() {
+        if (!languageSelect) return;
+        const language = languageSelect.value;
+        const option = languageOptions.find(function (item) { return item.dataset.language === language; });
+        if (option) languageTrigger.querySelector('.language-current-code').textContent = option.querySelector('strong').textContent;
+        languageOptions.forEach(function (item) {
+          const isActive = item === option;
+          item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          item.classList.toggle('is-active', isActive);
+        });
+      }
+
+      function closeLanguageMenu() {
+        languagePicker.removeAttribute('open');
+      }
+      languageOptions.forEach(function (option) {
+        option.addEventListener('click', function () {
+          languageSelect.value = option.dataset.language;
+          languageSelect.dispatchEvent(new Event('change', { bubbles: true }));
+          syncLanguageMenu();
+          closeLanguageMenu();
+          languageTrigger.focus();
+        });
+      });
+      languagePicker.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeLanguageMenu();
+          languageTrigger.focus();
+        }
+      });
+      languageSelect.addEventListener('change', syncLanguageMenu);
+      syncLanguageMenu();
+
       const pressBody = document.querySelector('.press-body');
       const pressSidebar = document.querySelector('.press-sidebar');
-      const sections = ['trailer', 'media', 'press', 'descriptions-row', 'branding', 'credits']
+      const sections = ['descriptions-row', 'press', 'trailer', 'media', 'branding', 'credits']
         .map(function (id) { return document.getElementById(id); });
       const separators = Array.from(pressBody.querySelectorAll(':scope > hr'));
 

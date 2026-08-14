@@ -578,6 +578,15 @@
     document.documentElement.dataset.language = normalized;
     const selector = document.getElementById('language-select');
     if (selector) selector.value = normalized;
+
+    const languageOption = document.querySelector('.language-menu [data-language="' + normalized + '"]');
+    const languageCode = document.querySelector('.language-current-code');
+    if (languageOption && languageCode) languageCode.textContent = languageOption.querySelector('strong').textContent;
+    document.querySelectorAll('.language-menu [data-language]').forEach((option) => {
+      const isActive = option === languageOption;
+      option.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      option.classList.toggle('is-active', isActive);
+    });
   }
 
   function saveLanguage(language) {
